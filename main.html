@@ -933,6 +933,28 @@
             background: rgba(99, 102, 241, 0.1);
             color: var(--primary-color);
         }
+        .app-footer {
+    background: var(--card-bg, #222c3d);
+    color: var(--text-secondary, #b0bac9);
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    font-size: 1rem;
+    border-top: 1px solid var(--border-color, #27324b);
+    margin-top: 3rem;
+}
+
+.app-footer a {
+    color: var(--primary-color, #6366f1) !important;
+    text-decoration: underline;
+    margin: 0 0.7em;
+    transition: color 0.2s;
+}
+
+.app-footer a:hover {
+    color: var(--secondary-color, #8b5cf6) !important;
+    text-decoration: none;
+}
+
     </style>
     <!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -2281,6 +2303,17 @@
 
 
 </script>
+<!-- Footer Start -->
+<footer class="app-footer">
+    <div>© 2025 <strong>Attack Mode</strong> &middot; All Rights Reserved by as_hi_sh_</div>
+    <div>
+        <a href="https://attackmode.ashish.systems/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Visit Home</a>
+        &middot;
+        <a href="mailto:support@attackmode.ashish.systems" style="color: inherit;">Contact Support</a>
+    </div>
+</footer>
+<!-- Footer End -->
+
 
 </body>
 </html>
