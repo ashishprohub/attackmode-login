@@ -2167,12 +2167,14 @@
         // Show logout success message
         showToast('Logout successful! Redirecting...', 'success');
         
-        // Redirect to specified URL and close current page
+        // Redirect to specific page (not main.html)
         setTimeout(() => {
-            window.location.href = "https://attackmode.ashish.systems";
+            window.location.replace('https://attackmode.ashish.systems/index.html');
+            // Or try: window.location.replace('https://attackmode.ashish.systems/login.html');
         }, 1000);
     }
 }
+
 
 
         // Drag and Drop Functions
