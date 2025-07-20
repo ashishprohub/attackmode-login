@@ -958,7 +958,33 @@
             </div>
             <div class="user-info">
                 <span>Welcome, <strong id="userName">User</strong></span>
-                <button onclick="logout()">Logout</button>
+                <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+
+<style>
+  .logout-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+
+  .logout-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(239, 68, 68, 0.6);
+  }
+
+  .logout-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
+  }
+</style>
+
 
             </div>
         </div>
