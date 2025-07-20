@@ -2223,27 +2223,37 @@
         // Initialize Pomodoro Timer
         document.getElementById('pomodoroTab').classList.add('active');
     </script>
-    <script>
+  <script>
   const firebaseConfig = {
     apiKey: "AIzaSyBVFpywmlJWBRTxB6u99G-F_byvQN4-ro0",
     authDomain: "attackmode-a315b.firebaseapp.com",
     projectId: "attackmode-a315b",
     storageBucket: "attackmode-a315b.appspot.com",
     messagingSenderId: "151463533551",
-    appId: "1:151463533551:web:ed236e60afbc4ba45d341a",
-    measurementId: "G-40X4WWR5VL"
+    appId: "1:151463533551:web:ed236e60afbc4ba45d341a"
   };
 
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
 
-  // Block access if not logged in
+  // 🔐 Redirect to login page if not logged in
   auth.onAuthStateChanged(user => {
     if (!user) {
-      window.location.href = "index.html"; // redirect to login
+      window.location.href = "index.html";  // or your login file name
     }
   });
+
+  // 🚪 Logout function
+  function logout() {
+    auth.signOut().then(() => {
+      window.location.href = "index.html";  // Redirect after logout
+    }).catch((error) => {
+      console.error("Logout failed:", error);
+    });
+  }
+</script>
+
 
 
 </script>
