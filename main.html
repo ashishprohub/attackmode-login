@@ -958,10 +958,8 @@
             </div>
             <div class="user-info">
                 <span>Welcome, <strong id="userName">User</strong></span>
-                <button class="logout-btn" onclick="handleLogout()">
-                    <i class="fas fa-sign-out-alt"></i>
-                    Logout
-                </button>
+                <button onclick="logout()">Logout</button>
+
             </div>
         </div>
     </header>
@@ -2237,19 +2235,19 @@
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
 
-  // 🔐 Redirect to login page if not logged in
-  auth.onAuthStateChanged(user => {
+  // 🔐 Block direct access if not logged in
+  auth.onAuthStateChanged((user) => {
     if (!user) {
-      window.location.href = "index.html";  // or your login file name
+      window.location.href = "index.html"; // <-- login page path
     }
   });
 
   // 🚪 Logout function
   function logout() {
     auth.signOut().then(() => {
-      window.location.href = "index.html";  // Redirect after logout
+      window.location.href = "index.html"; // <-- redirect after logout
     }).catch((error) => {
-      console.error("Logout failed:", error);
+      console.error("Logout error:", error);
     });
   }
 </script>
