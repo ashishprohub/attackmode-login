@@ -2159,24 +2159,21 @@
         }
 
         // Fixed Logout Function
-        function handleLogout() {
-            if (confirm('Are you sure you want to logout? Your data will be saved locally.')) {
-                // Save current state
-                saveTasks();
-                
-                // Show logout success message
-                showToast('Logout successful! Your data has been saved.', 'success');
-                
-                // Optional: Clear session data (but keep tasks)
-                // You can redirect to login page here if you have one
-                // window.location.href = 'login.html';
-                
-                // Or refresh the page to "logout"
-                setTimeout(() => {
-                    window.location.reload();
-                }, 1500);
-            }
-        }
+       function handleLogout() {
+    if (confirm('Are you sure you want to logout? Your data will be saved locally.')) {
+        // Save current state
+        saveTasks();
+        
+        // Show logout success message
+        showToast('Logout successful! Redirecting...', 'success');
+        
+        // Redirect to specified URL and close current page
+        setTimeout(() => {
+            window.location.href = 'https://attackmode.ashish.systems';
+        }, 1000);
+    }
+}
+
 
         // Drag and Drop Functions
         function dragStart(e) {
